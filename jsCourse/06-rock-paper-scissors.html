@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <div>
+      <button onclick="playGame('Rock')">
+        Rock
+      </button>
+      <button onclick="playGame('Paper')">
+        Paper
+      </button>
+      <button onclick="playGame('Scissors')">
+        Scissors
+      </button>
+    </div>
+    <script>
+      const Rock = 'Rock';
+      const Paper = 'Paper';
+      const Scissors = 'Scissors';
+      let pc = '';
+
+      function playGame(playerChoice) {
+        const randomNum = Math.random();
+
+        if (randomNum <= 0.33) {
+          pc = Rock;
+        } else if (randomNum > 0.33 && randomNum <= 0.66) {
+          pc = Paper;
+        } else {
+          pc = Scissors;
+        }
+
+        console.log('Player choice:', playerChoice);
+        console.log('PC choice:', pc);
+
+        if (playerChoice === pc) {
+          console.log('Empate');
+        } else if (
+          (playerChoice === Rock && pc === Scissors) ||
+          (playerChoice === Paper && pc === Rock) ||
+          (playerChoice === Scissors && pc === Paper)
+        ) {
+          console.log('¡Ganas!');
+        } else {
+          console.log('Pierdes');
+        }
+      }
+    </script>
+  </body>
+</html>
