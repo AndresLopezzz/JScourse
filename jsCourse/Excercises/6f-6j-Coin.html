@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin</title>
+    <style>
+      button {
+        background-color: yellow;
+        font-family: Arial;
+        font-size: 15px;
+        font-weight: bold;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        height: 100px;
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid orange;
+        border-radius: 50px;
+        margin-top: 20px;
+        margin-left: 50px;
+        transition: 1s;
+      }
+      button:active {
+        background-color: rgb(255, 255, 112);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button onclick="coinGame('heads')">
+        heads
+      </button>
+      <button onclick="coinGame('tails')">
+        tails
+      </button>
+    </div>
+
+
+    <script>
+      function coinGame(GuessUser){
+        let randomNum = Math.random();
+        let coin = ''
+        let guess = ''
+
+        if (randomNum > 0.5) {
+          coin = 'heads';
+          result = coin;
+        } else {
+          coin = 'tails';
+          result = coin;
+        }
+        console.log(result);
+
+        if (GuessUser === result) {
+          alert('You win!!')
+        } else {
+          alert('You lose!!')
+        }
+      }
+        
+    </script>
+  </body>
+</html>
