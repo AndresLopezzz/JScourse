@@ -22,16 +22,15 @@
 // }
 
 const usuario = {
-  pais: 'Colombia',
+  pais: "Colombia",
   edad: 17,
   ticket: true,
 };
 
-
 if (usuario.edad > 17 && usuario.ticket) {
-  console.log('Usuario es mayor de edad y tiene un ticket, puede entrar.')
-} else if (usuario.edad > 17 && usuario.ticket === false){
-  console.log('Usuario es mayor de edad y no tiene ticket, no puede entrar.')
+  console.log("Usuario es mayor de edad y tiene un ticket, puede entrar.");
+} else if (usuario.edad > 17 && usuario.ticket === false) {
+  console.log("Usuario es mayor de edad y no tiene ticket, no puede entrar.");
 } else {
-  console.log('usuario es menor de edad, no puede entrar')
+  console.log("usuario es menor de edad, no puede entrar");
 }
