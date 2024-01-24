@@ -1,32 +1,29 @@
 /* 
 	📌 Named Imports
 */
-import {
-  nombre as nombreImportado,
-  obtenerPosts,
-  nombree,
-  obtenerPostss,
-} from "./namesExports";
-
-const nombre = "123";
-
+import { nombre as nombreImportado, obtenerPosts } from "./namedExports";
 console.log("Mi nombre es " + nombreImportado);
-0;
 console.log(obtenerPosts());
-
-console.log("Mi nombre es " + nombree);
-console.log(obtenerPostss());
-
-console.log(nombre);
 
 /* 
 	📌 Namespace Imports
 */
-import * as datos from "./namesExports";
+import * as datos from "./namedExports";
 console.log(datos.nombre);
 console.log(datos.obtenerPosts());
+
 /* 
 	📌 Default Imports
 */
-import obtenerUsuario from "./defaultExport";
-console.log(obtenerUsuario());
+import obtener from "./defaultExport";
+console.log(obtener());
+
+/* 
+	📌 Empty Imports
+	Carga todo el codigo pero sin hacer ningun objeto.
+*/
+import "./emptyExport";
+import { correo } from "./emptyExport";
+console.log(correo);
+//
+//

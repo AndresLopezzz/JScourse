@@ -1,37 +1,47 @@
 'use strict';
 
-const nombre$1 = "Andres";
+// Forma 1 - Palabra export
+// export const nombre = 'Carlos';
+
+// export const obtenerPosts = () => {
+// 	return ['Post1', 'Post2', 'Post3'];
+// };
+
+// Forma 2 - Final del documento
+const nombre = "Carlos";
 
 const obtenerPosts = () => {
   return ["Post1", "Post2", "Post3"];
 };
 
-const nombree = "Andres";
+// Forma 1 - mediante palabras export default
+// export default () => {
+// 	return {
+// 		nombre: 'Carlos',
+// 		correo: 'correo@correo.com',
+// 	};
+// };
 
-const obtenerPostss = () => {
-  return ["Post1", "Post2", "Post3"];
-};
-
-var obtenerUsuario = () => {
+// Forma 2 - Final del documento
+const obtenerUsuario = () => {
   return {
-    nombre: "Andres",
-    correo: "andre@gmail.com",
+    nombre: "Carlos",
+    correo: "correo@correo.com",
   };
 };
+
+console.log("Soy codigo que se ejecuta desde el archivo emptyExport.js");
+
+const correo = "correo@correo.com";
 
 /* 
 	📌 Named Imports
 */
-
-const nombre = "123";
-
-console.log("Mi nombre es " + nombre$1);
+console.log("Mi nombre es " + nombre);
 console.log(obtenerPosts());
-
-console.log("Mi nombre es " + nombree);
-console.log(obtenerPostss());
-
 console.log(nombre);
-console.log(nombre$1);
 console.log(obtenerPosts());
 console.log(obtenerUsuario());
+console.log(correo);
+//
+//
