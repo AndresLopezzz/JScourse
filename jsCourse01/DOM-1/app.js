@@ -1,3 +1,7 @@
-const enlace = document.getElementsByTagName("a");
+const toppings = document.getElementsByClassName("topping");
 
-console.log(enlace[0].setAttribute("href", "http://twitter.com/"));
+for (const topping of toppings) {
+  topping.addEventListener("click", (nombreTopping) => {
+    console.log(nombreTopping.target.innerText);
+  });
+}
